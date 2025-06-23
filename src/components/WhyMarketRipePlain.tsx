@@ -42,7 +42,7 @@ const WhyMarketRipePlain: React.FC = () => {
         </h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <p style={{ color: '#fff', fontWeight: 'bold', fontSize: 18 }}>
-            $668M TAM is just the beginning.
+            $134M TAM is just the beginning.
           </p>
           <p style={{ color: '#fff' }}>
             These are just the known, structured field sales roles in the U.S.
@@ -51,10 +51,10 @@ const WhyMarketRipePlain: React.FC = () => {
             From there, we expand:
           </p>
           <ul style={{ color: '#fff', paddingLeft: 20, margin: 0 }}>
-            <li style={{ marginBottom: 6 }}>🌍 Globally</li>
-            <li style={{ marginBottom: 6 }}>🤖 Into tech-assisted reps</li>
+            <li style={{ marginBottom: 6 }}>🚗 Into dealerships</li>
+            <li style={{ marginBottom: 6 }}>📱 Into phone companies</li>
             <li style={{ marginBottom: 6 }}>
-              🧑‍🔧 Into blue-collar + hybrid frontline roles
+              📡 Into telecoms
             </li>
           </ul>
         </div>

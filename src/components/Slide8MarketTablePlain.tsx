@@ -2,52 +2,59 @@ import React from 'react'
 
 const marketData = [
   {
-    vertical: 'Insurance',
-    reps: '445k',
-    tam: '$534M',
-    one: '$5.3M',
-    five: '$26.7M',
-    ten: '$53.4M'
-  },
-  {
     vertical: 'Solar',
     reps: '33k',
     tam: '$39.6M',
     one: '$0.4M',
+    oneReps: '330',
     five: '$2.0M',
-    ten: '$4.0M'
+    fiveReps: '1.7k',
+    ten: '$4.0M',
+    tenReps: '3.3k'
   },
   {
     vertical: 'HVAC & Plumbing',
     reps: '31k',
     tam: '$37.2M',
     one: '$0.37M',
+    oneReps: '310',
     five: '$1.9M',
-    ten: '$3.7M'
+    fiveReps: '1.6k',
+    ten: '$3.7M',
+    tenReps: '3.1k'
   },
   {
     vertical: 'Home Services',
     reps: '30k',
     tam: '$36M',
     one: '$0.36M',
+    oneReps: '300',
     five: '$1.8M',
-    ten: '$3.6M'
+    fiveReps: '1.5k',
+    ten: '$3.6M',
+    tenReps: '3.0k'
   },
   {
     vertical: 'Roofing',
     reps: '9.6k',
     tam: '$11.5M',
     one: '$0.12M',
+    oneReps: '96',
     five: '$0.58M',
-    ten: '$1.15M'
+    fiveReps: '480',
+    ten: '$1.15M',
+    tenReps: '960'
   },
   {
     vertical: 'Pest Control',
     reps: '7.8k',
     tam: '$9.4M',
     one: '$0.09M',
+    oneReps: '78',
     five: '$0.47M',
-    ten: '$0.94M'
+    fiveReps: '390',
+    ten: '$0.94M',
+    tenReps: '780'
   }
 ]
 
@@ -79,9 +86,12 @@ const Slide8MarketTablePlain: React.FC = () => {
               <th style={{ border: '1px solid #444', padding: 8 }}>Vertical</th>
               <th style={{ border: '1px solid #444', padding: 8 }}>Reps</th>
               <th style={{ border: '1px solid #444', padding: 8 }}>TAM</th>
-              <th style={{ border: '1px solid #444', padding: 8 }}>1%</th>
-              <th style={{ border: '1px solid #444', padding: 8 }}>5%</th>
-              <th style={{ border: '1px solid #444', padding: 8 }}>10%</th>
+              <th style={{ border: '1px solid #444', padding: 8 }}>1% ARR</th>
+              <th style={{ border: '1px solid #444', padding: 8 }}>1% Reps</th>
+              <th style={{ border: '1px solid #444', padding: 8 }}>5% ARR</th>
+              <th style={{ border: '1px solid #444', padding: 8 }}>5% Reps</th>
+              <th style={{ border: '1px solid #444', padding: 8 }}>10% ARR</th>
+              <th style={{ border: '1px solid #444', padding: 8 }}>10% Reps</th>
             </tr>
           </thead>
           <tbody>
@@ -124,6 +134,15 @@ const Slide8MarketTablePlain: React.FC = () => {
                     textAlign: 'right'
                   }}
                 >
+                  {row.oneReps}
+                </td>
+                <td
+                  style={{
+                    border: '1px solid #444',
+                    padding: 8,
+                    textAlign: 'right'
+                  }}
+                >
                   {row.five}
                 </td>
                 <td
@@ -133,7 +152,25 @@ const Slide8MarketTablePlain: React.FC = () => {
                     textAlign: 'right'
                   }}
                 >
+                  {row.fiveReps}
+                </td>
+                <td
+                  style={{
+                    border: '1px solid #444',
+                    padding: 8,
+                    textAlign: 'right'
+                  }}
+                >
                   {row.ten}
+                </td>
+                <td
+                  style={{
+                    border: '1px solid #444',
+                    padding: 8,
+                    textAlign: 'right'
+                  }}
+                >
+                  {row.tenReps}
                 </td>
               </tr>
             ))}
@@ -154,7 +191,7 @@ const Slide8MarketTablePlain: React.FC = () => {
                   textAlign: 'right'
                 }}
               >
-                556k
+                111k
               </td>
               <td
                 style={{
@@ -163,7 +200,27 @@ const Slide8MarketTablePlain: React.FC = () => {
                   textAlign: 'right'
                 }}
               >
-                $668M
+                $134M
+              </td>
+              <td
+                style={{
+                  border: '1px solid #444',
+                  padding: 8,
+                  textAlign: 'right',
+                  fontWeight: 'bold'
+                }}
+              >
+                $1.34M
+              </td>
+              <td
+                style={{
+                  border: '1px solid #444',
+                  padding: 8,
+                  textAlign: 'right',
+                  fontWeight: 'bold'
+                }}
+              >
+                1.1k
               </td>
               <td
                 style={{
@@ -183,7 +240,7 @@ const Slide8MarketTablePlain: React.FC = () => {
                   fontWeight: 'bold'
                 }}
               >
-                $33.4M
+                5.6k
               </td>
               <td
                 style={{
@@ -193,7 +250,17 @@ const Slide8MarketTablePlain: React.FC = () => {
                   fontWeight: 'bold'
                 }}
               >
-                $66.8M
+                $13.4M
+              </td>
+              <td
+                style={{
+                  border: '1px solid #444',
+                  padding: 8,
+                  textAlign: 'right',
+                  fontWeight: 'bold'
+                }}
+              >
+                11.1k
               </td>
             </tr>
           </tbody>
@@ -206,7 +273,7 @@ const Slide8MarketTablePlain: React.FC = () => {
         </h3>
         <div style={{ fontSize: 32, marginBottom: 12 }}>📊</div>
         <div style={{ fontSize: 22, fontWeight: 'bold', marginBottom: 8 }}>
-          556,400
+          111,400
         </div>
         <div style={{ fontSize: 14, marginBottom: 8 }}>
           Field-based sales reps
@@ -216,9 +283,9 @@ const Slide8MarketTablePlain: React.FC = () => {
         </div>
         <div style={{ fontSize: 14, marginBottom: 8 }}>ACV per rep</div>
         <div style={{ fontSize: 32, fontWeight: 'bold', marginBottom: 8 }}>
-          $668M
+          $134M
         </div>
-        <div style={{ fontSize: 14 }}>TAM across 6 underserved industries</div>
+        <div style={{ fontSize: 14 }}>TAM across 5 targeted industries</div>
       </div>
     </div>
   )
