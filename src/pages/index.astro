@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GridLayout, { GridRow } from '../components/GridLayout';
+import SalesTagHero from '../components/SalesTagHero';
+import SalesTagMarketOpportunity from '../components/SalesTagMarketOpportunity';
+---
+
+<Layout title="SalesTag - AI Field Sales Intelligence" layout="wide" maxWidth="4xl">
+	<GridLayout client:load rows={2}>
+		<!-- Row 1: SalesTag Hero Section -->
+		<GridRow client:load>
+			<SalesTagHero client:load />
+		</GridRow>
+
+		<!-- Row 2: Market Opportunity Section -->
+		<GridRow client:load>
+			<SalesTagMarketOpportunity client:load />
+		</GridRow>
+	</GridLayout>
+</Layout>

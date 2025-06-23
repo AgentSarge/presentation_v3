@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GridLayout, { GridRow } from '../components/GridLayout';
+---
+
+<Layout title="Competitive Landscape - SalesTag" layout="wide" maxWidth="4xl">
+	<GridLayout client:load>
+		<!-- Row 1: Hero Section -->
+		<GridRow client:load>
+			<div class="text-center mb-8">
+				<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 tracking-tight text-white">
+					Competitive Landscape
+				</h1>
+				<h2 class="text-2xl lg:text-3xl xl:text-4xl font-medium text-blue-400 mb-8">
+					First-mover advantage in field sales intelligence
+				</h2>
+			</div>
+		</GridRow>
+
+		<!-- Row 2: Main Content -->
+		<GridRow client:load>
+			<div class="space-y-8">
+				<!-- Competitive Matrix -->
+				<div class="card p-6 bg-black/40 border border-gray-800">
+					<h3 class="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
+					<!-- Add competitive comparison content here -->
+				</div>
+
+				<!-- Our Differentiation -->
+				<div class="card p-6 bg-black/40 border border-gray-800">
+					<h3 class="text-2xl font-bold text-white mb-6">Our Differentiation</h3>
+					<!-- Add differentiation points here -->
+				</div>
+			</div>
+		</GridRow>
+	</GridLayout>
+</Layout> 

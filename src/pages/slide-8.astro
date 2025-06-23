@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GridLayout, { GridRow } from '../components/GridLayout';
+import WhyMarketRipe from '../components/WhyMarketRipe';
+---
+
+<Layout title="Market Opportunity - SelfTag" layout="wide" maxWidth="4xl">
+	<GridLayout client:load>
+		<!-- Row 1: Hero Section -->
+		<GridRow client:load>
+			<div class="text-center mb-8">
+				<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 tracking-tight text-white">
+					Market Opportunity
+				</h1>
+				<h2 class="text-2xl lg:text-3xl xl:text-4xl font-medium text-blue-400 mb-8">
+					$668M TAM across 6 underserved industries
+				</h2>
+			</div>
+		</GridRow>
+
+		<!-- Row 2: Main Content -->
+		<GridRow client:load>
+			<div class="space-y-6">
+				<!-- Market Data Section -->
+				<div class="grid lg:grid-cols-2 gap-8">
+					<!-- Market Breakdown Table -->
+					<div class="card p-4 bg-black/40 border border-gray-800">
+						<h3 class="text-lg font-bold text-white mb-4">Target Verticals</h3>
+						<div class="space-y-1 text-sm">
+							<div class="flex justify-between items-center py-2 border-b border-gray-700/50 mb-1">
+								<span class="text-text-muted font-semibold w-32">Vertical</span>
+								<div class="flex gap-4">
+									<span class="text-text-muted font-semibold w-12 text-right">Reps</span>
+									<span class="text-text-muted font-semibold w-12 text-right">TAM</span>
+									<span class="text-text-muted font-semibold w-12 text-right">1%</span>
+									<span class="text-text-muted font-semibold w-12 text-right">5%</span>
+									<span class="text-text-muted font-semibold w-12 text-right">10%</span>
+								</div>
+							</div>
+							<div class="flex justify-between items-center py-2 border-b border-gray-800/30">
+								<span class="text-white w-32">Insurance</span>
+								<div class="flex gap-4">
+									<span class="text-white w-12 text-right">445k</span>
+									<span class="text-green-400 w-12 text-right">$534M</span>
+									<span class="text-white w-12 text-right">$5.3M</span>
+									<span class="text-blue-400 w-12 text-right">$26.7M</span>
+									<span class="text-pink-400 w-12 text-right">$53.4M</span>
+								</div>
+							</div>
+							<div class="flex justify-between items-center py-2 border-b border-gray-800/30">
+								<span class="text-white w-32">Solar</span>
+								<div class="flex gap-4">
+									<span class="text-white w-12 text-right">33k</span>
+									<span class="text-green-400 w-12 text-right">$39.6M</span>
+									<span class="text-white w-12 text-right">$0.4M</span>
+									<span class="text-blue-400 w-12 text-right">$2.0M</span>
+									<span class="text-pink-400 w-12 text-right">$4.0M</span>
+								</div>
+							</div>
+							<div class="flex justify-between items-center py-2 border-b border-gray-800/30">
+								<span class="text-white w-32">HVAC & Plumbing</span>
+								<div class="flex gap-4">
+									<span class="text-white w-12 text-right">31k</span>
+									<span class="text-green-400 w-12 text-right">$37.2M</span>
+									<span class="text-white w-12 text-right">$0.37M</span>
+									<span class="text-blue-400 w-12 text-right">$1.9M</span>
+									<span class="text-pink-400 w-12 text-right">$3.7M</span>
+								</div>
+							</div>
+							<div class="flex justify-between items-center py-2 border-b border-gray-800/30">
+								<span class="text-white w-32">Home Services</span>
+								<div class="flex gap-4">
+									<span class="text-white w-12 text-right">30k</span>
+									<span class="text-green-400 w-12 text-right">$36M</span>
+									<span class="text-white w-12 text-right">$0.36M</span>
+									<span class="text-blue-400 w-12 text-right">$1.8M</span>
+									<span class="text-pink-400 w-12 text-right">$3.6M</span>
+								</div>
+							</div>
+							<div class="flex justify-between items-center py-2 border-b border-gray-800/30">
+								<span class="text-white w-32">Roofing</span>
+								<div class="flex gap-4">
+									<span class="text-white w-12 text-right">9.6k</span>
+									<span class="text-green-400 w-12 text-right">$11.5M</span>
+									<span class="text-white w-12 text-right">$0.12M</span>
+									<span class="text-blue-400 w-12 text-right">$0.58M</span>
+									<span class="text-pink-400 w-12 text-right">$1.15M</span>
+								</div>
+							</div>
+							<div class="flex justify-between items-center py-2 border-b border-gray-800/30">
+								<span class="text-white w-32">Pest Control</span>
+								<div class="flex gap-4">
+									<span class="text-white w-12 text-right">7.8k</span>
+									<span class="text-green-400 w-12 text-right">$9.4M</span>
+									<span class="text-white w-12 text-right">$0.09M</span>
+									<span class="text-blue-400 w-12 text-right">$0.47M</span>
+									<span class="text-pink-400 w-12 text-right">$0.94M</span>
+								</div>
+							</div>
+							<div class="flex justify-between items-center py-2 border-t border-gray-700/50 mt-2">
+								<span class="text-white font-semibold w-32">Total ARR</span>
+								<div class="flex gap-4">
+									<span class="text-white w-12 text-right">556k</span>
+									<span class="text-green-400 w-12 text-right">$668M</span>
+									<span class="text-white font-bold w-12 text-right">$6.7M</span>
+									<span class="text-blue-400 font-bold w-12 text-right">$33.4M</span>
+									<span class="text-pink-400 font-bold w-12 text-right">$66.8M</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TAM Summary -->
+					<div class="card p-4 bg-black/40 border border-gray-800">
+						<div class="text-center">
+							<div class="text-3xl mb-3">📊</div>
+							<h3 class="text-xl font-bold text-white mb-4">Total Addressable Market</h3>
+							<div class="space-y-3">
+								<div class="p-3 bg-blue-400/10 border border-blue-400/30 rounded-lg">
+									<div class="text-2xl font-bold text-blue-400 mb-1">556,400</div>
+									<p class="text-sm text-text-muted">Field-based sales reps</p>
+								</div>
+								<div class="text-sm text-text-muted">×</div>
+								<div class="p-3 bg-green-400/10 border border-green-400/30 rounded-lg">
+									<div class="text-2xl font-bold text-green-400 mb-1">$1,200</div>
+									<p class="text-sm text-text-muted">ACV per rep</p>
+								</div>
+								<div class="text-sm text-text-muted">→</div>
+								<div class="p-4 bg-gradient-to-r from-pink-400/10 to-purple-400/10 border-2 border-pink-400/30 rounded-lg">
+									<div class="text-3xl font-bold text-pink-400 mb-1">$668M</div>
+									<p class="text-sm text-text-muted font-medium">TAM across 6 underserved industries</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</GridRow>
+
+		<!-- Row 3: Why Market Is Ripe -->
+		<GridRow client:load>
+			<WhyMarketRipe client:load />
+		</GridRow>
+	</GridLayout>
+</Layout> 

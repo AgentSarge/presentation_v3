@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GridLayout, { GridRow } from '../components/GridLayout';
+---
+
+<Layout title="Smart Badge for Field Sales - SelfTag" layout="wide" maxWidth="4xl">
+	<GridLayout client:load>
+		<!-- Row 1: Header -->
+		<GridRow client:load>
+			<div class="text-center mb-8">
+				<p class="text-sm text-text-muted mb-4">We've built a</p>
+				<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 tracking-tight text-white">
+					Smart Badge for Field Sales
+				</h1>
+				<h2 class="text-2xl lg:text-3xl xl:text-4xl font-medium text-blue-400 mb-8">
+					That Never Misses a Conversation
+				</h2>
+			</div>
+		</GridRow>
+
+		<!-- Row 2: Main Content Grid -->
+		<GridRow client:load>
+			<div class="grid lg:grid-cols-3 gap-8 items-start">
+				<!-- Left Column -->
+				<div class="space-y-8"></div>
+
+				<!-- Center Column: Badge -->
+				<div class="flex justify-center items-center">
+					<div class="relative">
+						<img src="/badge.png" alt="Smart Badge" class="w-full max-w-xl mx-auto" />
+							<!-- Decorative text around badge -->
+							<div class="absolute -left-8 top-1/2 transform -rotate-90 text-xs text-gray-500 font-mono">
+								ECHOES ON
+							</div>
+							<div class="absolute -right-8 top-1/2 transform rotate-90 text-xs text-gray-500 font-mono">
+								WORDS OFF
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Column -->
+				<div class="space-y-8"></div>
+			</div>
+		</GridRow>
+	</GridLayout>
+</Layout> 

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GridLayout, { GridRow } from '../components/GridLayout';
+---
+
+<Layout title="Financial Projections - SalesTag" layout="wide" maxWidth="4xl">
+	<GridLayout client:load>
+		<!-- Row 1: Hero Section -->
+		<GridRow client:load>
+			<div class="text-center mb-8">
+				<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 tracking-tight text-white">
+					Financial Projections
+				</h1>
+				<h2 class="text-2xl lg:text-3xl xl:text-4xl font-medium text-green-400 mb-8">
+					Path to profitability and scale
+				</h2>
+			</div>
+		</GridRow>
+
+		<!-- Row 2: Revenue Projections -->
+		<GridRow client:load>
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- Revenue Growth -->
+				<div class="card p-6 bg-black/40 border border-gray-800">
+					<h3 class="text-xl font-bold text-white mb-4">Revenue Forecast</h3>
+					<!-- Add revenue projections chart/table here -->
+				</div>
+
+				<!-- Key Metrics -->
+				<div class="card p-6 bg-black/40 border border-gray-800">
+					<h3 class="text-xl font-bold text-white mb-4">Key Financial Metrics</h3>
+					<!-- Add key metrics here -->
+				</div>
+			</div>
+		</GridRow>
+
+		<!-- Row 3: Unit Economics -->
+		<GridRow client:load>
+			<div class="card p-6 bg-black/40 border border-gray-800">
+				<h3 class="text-2xl font-bold text-white mb-6">Unit Economics</h3>
+				<div class="grid lg:grid-cols-3 gap-6">
+					<!-- CAC -->
+					<div class="text-center">
+						<h4 class="text-green-400 font-semibold mb-2">Customer Acquisition Cost</h4>
+						<!-- Add CAC details here -->
+					</div>
+
+					<!-- LTV -->
+					<div class="text-center">
+						<h4 class="text-blue-400 font-semibold mb-2">Lifetime Value</h4>
+						<!-- Add LTV details here -->
+					</div>
+
+					<!-- LTV:CAC Ratio -->
+					<div class="text-center">
+						<h4 class="text-purple-400 font-semibold mb-2">LTV:CAC Ratio</h4>
+						<!-- Add ratio details here -->
+					</div>
+				</div>
+			</div>
+		</GridRow>
+	</GridLayout>
+</Layout> 

@@ -1,0 +1,514 @@
+---
+export interface Props {
+  title: string;
+  layout?: 'constrained' | 'wide' | 'full';
+  maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | 'full';
+  showSidebar?: boolean;
+}
+
+const { 
+  title, 
+  layout = 'constrained',
+  maxWidth = 'lg',
+  showSidebar = true
+} = Astro.props;
+
+// Layout classes based on props
+const layoutClasses = {
+  constrained: 'layout-constrained',
+  wide: 'layout-wide', 
+  full: 'layout-full'
+};
+
+const maxWidthClasses = {
+  sm: 'max-w-2xl',    // ~672px
+  md: 'max-w-4xl',    // ~896px  
+  lg: 'max-w-5xl',    // ~1024px
+  xl: 'max-w-6xl',    // ~1152px
+  '2xl': 'max-w-7xl', // ~1280px
+  '3xl': 'max-w-[1400px]', // ~1400px
+  '4xl': 'max-w-[1600px]', // ~1600px
+  full: 'max-w-none'  // No max width limit
+};
+
+// Get current path for active navigation state
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="app-container">
+      {showSidebar && (
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar" id="sidebar">
+          <div class="sidebar-header">
+            <div class="logo">
+              <span class="logo-icon">⚡</span>
+              <span class="logo-text">SalesTag</span>
+            </div>
+          </div>
+          
+          <div class="sidebar-nav">
+            <div class="nav-section">
+              <div class="nav-label">Presentation</div>
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="/" class={`nav-link ${currentPath === '/' ? 'active' : ''}`}>
+                    <span class="nav-icon">🚀</span>
+                    <span class="nav-text">Start Here</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/original" class={`nav-link ${currentPath === '/original' ? 'active' : ''}`}>
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Market Opportunity</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/layout-demo" class={`nav-link ${currentPath === '/layout-demo' ? 'active' : ''}`}>
+                    <span class="nav-icon">🎯</span>
+                    <span class="nav-text">Market Validation</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/slide-3" class={`nav-link ${currentPath === '/slide-3' ? 'active' : ''}`}>
+                    <span class="nav-icon">🚨</span>
+                    <span class="nav-text">The Problem</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <div class="nav-label">Solution</div>
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="/slide-4" class={`nav-link ${currentPath === '/slide-4' ? 'active' : ''}`}>
+                    <span class="nav-icon">📝</span>
+                    <span class="nav-text">SalesTag</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/slide-5" class={`nav-link ${currentPath === '/slide-5' ? 'active' : ''}`}>
+                    <span class="nav-icon">🤖</span>
+                    <span class="nav-text">Smart Badge</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/slide-6" class={`nav-link ${currentPath === '/slide-6' ? 'active' : ''}`}>
+                    <span class="nav-icon">⚡</span>
+                    <span class="nav-text">Pipeline</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/slide-7" class={`nav-link ${currentPath === '/slide-7' ? 'active' : ''}`}>
+                    <span class="nav-icon">🎨</span>
+                    <span class="nav-text">Dashboard</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <div class="nav-label">Competitive Advantage</div>
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <a href="/slide-8" class={`nav-link ${currentPath === '/slide-8' ? 'active' : ''}`}>
+                    <span class="nav-icon">🔬</span>
+                    <span class="nav-text">Market Opportunity</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/slide-9" class={`nav-link ${currentPath === '/slide-9' ? 'active' : ''}`}>
+                    <span class="nav-icon">🌟</span>
+                    <span class="nav-text">Business Model</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/slide-10" class={`nav-link ${currentPath === '/slide-10' ? 'active' : ''}`}>
+                    <span class="nav-icon">🎪</span>
+                    <span class="nav-text">Product Roadmap</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/slide-11" class={`nav-link ${currentPath === '/slide-11' ? 'active' : ''}`}>
+                    <span class="nav-icon">🏁</span>
+                    <span class="nav-text">Team</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="nav-section">
+              <div class="nav-label">Funding</div>
+              <ul class="nav-list">
+                <li class="nav-item">
+                  <button class="nav-link nav-button" id="theme-toggle">
+                    <span class="nav-icon">🌙</span>
+                    <span class="nav-text">Ask</span>
+                  </button>
+                </li>
+                <li class="nav-item">
+                  <a href="https://github.com" target="_blank" class="nav-link">
+                    <span class="nav-icon">📱</span>
+                    <span class="nav-text">Contact</span>
+                    <span class="external-link">↗</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="sidebar-footer">
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span class="status-text">All systems operational</span>
+            </div>
+          </div>
+        </nav>
+      )}
+      
+      <!-- Main Content Area -->
+      <main class={`main-content ${showSidebar ? 'with-sidebar' : ''} ${layoutClasses[layout]} ${maxWidthClasses[maxWidth]}`}>
+        <div class="content-wrapper">
+          <slot />
+        </div>
+      </main>
+      
+
+    </div>
+
+
+  </body>
+</html>
+
+<style is:global>
+  @import "../styles/global.css";
+  
+  /* Layout System - Fixed Viewport with Sidebar */
+  
+  /* Base body and html - no overflow */
+  html, body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* App Container - Full viewport with flex layout */
+  .app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 280px;
+    height: 100vh;
+    background: var(--color-bg-secondary);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 40;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  
+  .sidebar-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  
+  .sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .sidebar-nav::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .sidebar-nav::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 2px;
+  }
+  
+  .sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-secondary);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+  
+  .logo-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+  }
+  
+
+  
+  .nav-section {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .nav-section:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-bottom: 0.125rem;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    position: relative;
+  }
+  
+  .nav-button {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-primary);
+  }
+  
+  .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text-primary);
+  }
+  
+  .nav-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 1.5rem;
+    background: var(--color-text-primary);
+    border-radius: 0 2px 2px 0;
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .nav-text {
+    flex: 1;
+  }
+  
+  .external-link {
+    font-size: 0.75rem;
+    opacity: 0.5;
+  }
+  
+  .sidebar-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid var(--color-border);
+    flex-shrink: 0;
+    background: var(--color-bg-secondary);
+  }
+  
+  .status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .status-text {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Adjust padding when sidebar is present */
+  .main-content.with-sidebar.layout-constrained {
+    padding: 2rem 3rem;
+  }
+  
+  .main-content.with-sidebar.layout-wide {
+    padding: 1.5rem 2rem;
+  }
+  
+  .main-content.with-sidebar.layout-full {
+    padding: 1rem;
+  }
+  
+  /* Content Wrapper - Fills available space */
+  .content-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  /* Mobile Styles - Hide sidebar on small screens */
+  @media (max-width: 1023px) {
+    .sidebar {
+      display: none;
+    }
+    
+    .main-content.with-sidebar {
+      width: 100%;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 1024px) {
+    .main-content.with-sidebar.layout-constrained {
+      padding: 3rem 5rem;
+    }
+    .main-content.with-sidebar.layout-wide {
+      padding: 2.5rem 4rem;
+    }
+    .main-content.with-sidebar.layout-full {
+      padding: 2rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .main-content.with-sidebar.layout-constrained {
+      padding: 3rem 6rem;
+    }
+    .main-content.with-sidebar.layout-wide {
+      padding: 3rem 5rem;
+    }
+    .main-content.with-sidebar.layout-full {
+      padding: 2.5rem;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .main-content.with-sidebar.layout-constrained {
+      padding: 3rem 4rem;
+    }
+    .main-content.with-sidebar.layout-wide {
+      padding: 2.5rem 3rem;
+    }
+    .main-content.with-sidebar.layout-full {
+      padding: 2rem;
+    }
+  }
+  
+  /* Utility classes for viewport-based components */
+  .viewport-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .section-spacing {
+    margin-bottom: 2rem;
+    flex-shrink: 0;
+  }
+  
+  .section-spacing:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Compact spacing for viewport layouts */
+  .section-spacing-compact {
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+  }
+  
+  .section-spacing-compact:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Content blocks with reduced spacing */
+  .content-block {
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .content-block:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* Scrollable section if needed within viewport */
+  .scrollable-section {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  /* Hide scrollbars but keep functionality */
+  .scrollable-section::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollable-section {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style> 

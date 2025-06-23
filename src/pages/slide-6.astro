@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GridLayout, { GridRow } from '../components/GridLayout';
+import PipelineTabs from '../components/PipelineTabs';
+---
+
+<Layout title="SelfTag Pipeline - SalesTag" layout="wide" maxWidth="4xl">
+	<GridLayout client:load>
+		<!-- Row 1: Hero -->
+		<GridRow client:load>
+			<div class="text-center mb-8">
+				<h1 class="text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 tracking-tighter">
+					SelfTag Pipeline — How It Works
+				</h1>
+				<p class="text-xl lg:text-2xl text-text-muted max-w-3xl mx-auto leading-relaxed">
+					From capture to coaching, every step is optimized for accuracy and speed.
+				</p>
+			</div>
+		</GridRow>
+
+		<!-- Row 2: Pipeline Tabs Interface -->
+		<GridRow client:load>
+			<div class="h-[600px]">
+				<PipelineTabs client:load />
+			</div>
+		</GridRow>
+
+		<!-- Row 3: Why It Wins Quote -->
+		<GridRow client:load>
+			<div class="text-center">
+				<div class="max-w-4xl mx-auto">
+					<blockquote class="text-2xl lg:text-3xl font-medium italic text-text-primary">
+						"SelfTag delivers <span class='text-blue-400'>real pipeline visibility</span> and <span class='text-green-400'>actionable coaching</span> — no distractions, no missed data."
+					</blockquote>
+				</div>
+			</div>
+		</GridRow>
+	</GridLayout>
+</Layout> 
