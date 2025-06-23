@@ -1,124 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GridLayout, { GridRow } from '../components/GridLayout';
+import Slide9BusinessModelPlain from '../components/Slide9BusinessModelPlain';
 ---
 
 <Layout title="Business Model - SelfTag" layout="wide" maxWidth="4xl">
 	<GridLayout client:load>
 		<!-- Row 1: Hero Section -->
 		<GridRow client:load>
-			<div class="text-center mb-8">
-				<h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 tracking-tight text-white">
-					Business Model
-				</h1>
-				<h2 class="text-2xl lg:text-3xl xl:text-4xl font-medium text-blue-400 mb-8">
-					High-margin SaaS powered by defensible hardware
-				</h2>
-				<p class="text-xl text-text-muted max-w-4xl mx-auto">
-					<span class="text-pink-400 font-medium">"Our wedge is hardware. Our revenue is software. Our moat is data."</span>
-				</p>
+			<div style="text-align: center; margin-bottom: 32px;">
+				<h1 style="font-size: 36px; font-weight: bold; margin-bottom: 24px; color: #fff;">Business Model</h1>
+				<h2 style="font-size: 24px; font-weight: 500; color: #fff; margin-bottom: 24px;">High-margin SaaS powered by defensible hardware</h2>
+				<p style="font-size: 20px; color: #fff; max-width: 600px; margin: 0 auto;">"Our wedge is hardware. Our revenue is software. Our moat is data."</p>
 			</div>
 		</GridRow>
 
-		<!-- Row 2: Revenue Streams -->
+		<!-- Row 2 & 3: Revenue Streams & The Model -->
 		<GridRow client:load>
-			<div class="grid lg:grid-cols-3 gap-8">
-				<!-- Hardware -->
-				<div class="card p-6 bg-black/40 border border-gray-800">
-					<div class="text-center mb-6">
-						<div class="text-4xl mb-4">🔧</div>
-						<h3 class="text-2xl font-bold text-blue-400 mb-2">Hardware</h3>
-						<div class="text-3xl font-bold text-green-400 mb-4">$99</div>
-						<p class="text-text-muted">per device (one-time)</p>
-					</div>
-					<p class="text-text-muted leading-relaxed mb-4">
-						Lightweight, durable badge unit with embedded AI + BLE. Manufactured in small runs now; scalable via contract fulfillment.
-					</p>
-					<div class="space-y-2">
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-blue-400 font-medium">•</span> ~30–40% gross margin target @ scale
-						</p>
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-blue-400 font-medium">•</span> Enables data lock-in and usage-based upsell
-						</p>
-					</div>
-				</div>
-
-				<!-- Software (SaaS) -->
-				<div class="card p-6 bg-black/40 border border-gray-800">
-					<div class="text-center mb-6">
-						<div class="text-4xl mb-4">💻</div>
-						<h3 class="text-2xl font-bold text-purple-400 mb-2">Software (SaaS)</h3>
-						<div class="text-3xl font-bold text-green-400 mb-4">$29–$79</div>
-						<p class="text-text-muted">per rep/month</p>
-					</div>
-					<p class="text-text-muted leading-relaxed mb-4">
-						Tiered by seat volume, data retention, coaching features
-					</p>
-					<div class="space-y-2">
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-purple-400 font-medium">•</span> Core MRR engine
-						</p>
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-purple-400 font-medium">•</span> ~85–90% gross margin
-						</p>
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-purple-400 font-medium">•</span> Annual contracts preferred (3–12 month ramp cycles)
-						</p>
-					</div>
-				</div>
-
-				<!-- Enterprise Intelligence -->
-				<div class="card p-6 bg-black/40 border border-gray-800">
-					<div class="text-center mb-6">
-						<div class="text-4xl mb-4">🏢</div>
-						<h3 class="text-2xl font-bold text-pink-400 mb-2">Enterprise Intelligence</h3>
-						<div class="text-3xl font-bold text-green-400 mb-4">Custom</div>
-						<p class="text-text-muted">contracts</p>
-					</div>
-					<p class="text-text-muted leading-relaxed mb-4">
-						API access, advanced analytics, teamwide rollout + CRM integrations
-					</p>
-					<div class="space-y-2">
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-pink-400 font-medium">•</span> $25k–$250k+ ACV depending on rep count
-						</p>
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-pink-400 font-medium">•</span> Growing % of pipeline via Solar, Insurance, Franchise orgs
-						</p>
-					</div>
-				</div>
-			</div>
-		</GridRow>
-
-		<!-- Row 3: The Model -->
-		<GridRow client:load>
-			<div class="card p-8 bg-black/40 border border-gray-800">
-				<h3 class="text-3xl font-bold text-white mb-6 text-center">The Model</h3>
-				<p class="text-xl text-center text-text-muted mb-8">
-					<span class="text-blue-400 font-medium">"Hardware wedges adoption. SaaS drives margin. Data powers expansion."</span>
-				</p>
-				<div class="grid md:grid-cols-3 gap-8">
-					<div class="text-center">
-						<h4 class="text-lg font-semibold text-white mb-3">Adoption</h4>
-						<p class="text-text-muted leading-relaxed">
-							Reps wear it once — we monetize <span class="text-green-400 font-medium">every conversation after</span>
-						</p>
-					</div>
-					<div class="text-center">
-						<h4 class="text-lg font-semibold text-white mb-3">Stickiness</h4>
-						<p class="text-text-muted leading-relaxed">
-							<span class="text-purple-400 font-medium">Annual SaaS + usage-based intelligence</span> makes this sticky and scalable
-						</p>
-					</div>
-					<div class="text-center">
-						<h4 class="text-lg font-semibold text-white mb-3">Expansion</h4>
-						<p class="text-text-muted leading-relaxed">
-							Our roadmap unlocks <span class="text-pink-400 font-medium">LTV expansion</span> (coaching, prediction, performance benchmarking)
-						</p>
-					</div>
-				</div>
-			</div>
+			<Slide9BusinessModelPlain client:load />
 		</GridRow>
 	</GridLayout>
 </Layout> 

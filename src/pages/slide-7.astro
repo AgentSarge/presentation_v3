@@ -1,27 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GridLayout, { GridRow } from '../components/GridLayout';
-import DashboardTabs from '../components/DashboardTabs';
+import DashboardTabsPlain from '../components/DashboardTabsPlain';
 ---
 
 <Layout title="SalesTag Dashboard - Coaching Intelligence" layout="wide" maxWidth="4xl">
 	<GridLayout client:load>
 		<!-- Row 1: Hero Section -->
 		<GridRow client:load>
-			<div class="text-center">
-				<h1 class="text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tighter">
-					SalesTag Dashboard
-				</h1>
-				<p class="text-xl lg:text-2xl text-text-muted max-w-4xl mx-auto">
-					Intelligent coaching insights from every field conversation
-				</p>
+			<div style="text-align: center;">
+				<h1 style="font-size: 36px; font-weight: bold; margin-bottom: 32px; color: #fff;">SalesTag Dashboard</h1>
+				<p style="font-size: 20px; color: #fff; max-width: 600px; margin: 0 auto;">Intelligent coaching insights from every field conversation</p>
 			</div>
 		</GridRow>
 
 		<!-- Row 2: Dashboard Tabs Interface -->
 		<GridRow client:load>
-			<div class="h-[700px]">
-				<DashboardTabs client:load />
+			<div style="min-height: 700px;">
+				<DashboardTabsPlain client:load />
 			</div>
 		</GridRow>
 	</GridLayout>

@@ -1,32 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GridLayout, { GridRow } from '../components/GridLayout';
-import MarketOpportunityHero from '../components/MarketOpportunityHero';
-import FeatureCards from '../components/FeatureCards';
-import InteractiveCounter from '../components/InteractiveCounter';
-import TechStack from '../components/TechStack';
+import MarketOpportunityHeroPlain from '../components/MarketOpportunityHeroPlain';
+import FeatureCardsPlain from '../components/FeatureCardsPlain';
+import InteractiveCounterPlain from '../components/InteractiveCounterPlain';
+import TechStackPlain from '../components/TechStackPlain';
 ---
 
 <Layout title="Our Market Wedge - SalesTag" layout="wide" maxWidth="4xl">
 	<GridLayout client:load>
 		<!-- Row 1: Market Opportunity Hero Section -->
 		<GridRow client:load>
-			<MarketOpportunityHero client:load />
+			<MarketOpportunityHeroPlain client:load />
 		</GridRow>
 
 		<!-- Row 2: Feature Cards (3-column grid) -->
 		<GridRow client:load>
-			<FeatureCards client:load />
+			<FeatureCardsPlain client:load />
 		</GridRow>
 
 		<!-- Row 3: Interactive Components (2-column grid) -->
 		<GridRow client:load>
-			<div class="grid lg:grid-cols-2 gap-6 h-full">
-				<div class="col-span-1">
-					<InteractiveCounter client:load />
+			<div style="display: flex; flex-direction: row; gap: 24px; width: 100%;">
+				<div style="flex: 1;">
+					<InteractiveCounterPlain client:load />
 				</div>
-				<div class="col-span-1">
-					<TechStack client:load />
+				<div style="flex: 1;">
+					<TechStackPlain client:load />
 				</div>
 			</div>
 		</GridRow>

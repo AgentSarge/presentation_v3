@@ -1,36 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GridLayout, { GridRow } from '../components/GridLayout';
+import Slide3ProblemPlain from '../components/Slide3ProblemPlain';
 ---
 
 <Layout title="The Problem - SalesTag" layout="wide" maxWidth="4xl">
 	<GridLayout client:load>
 		<!-- Row 1: Hero -->
 		<GridRow client:load>
-			<div class="text-center">
-				<h1 class="text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tighter">
-					The Problem
-				</h1>
-				<p class="text-xl lg:text-2xl text-text-muted max-w-3xl mx-auto leading-relaxed mb-4">
-					Why field sales is still a black box for most organizations.
-				</p>
+			<div style="text-align: center;">
+				<h1 style="font-size: 36px; font-weight: bold; margin-bottom: 32px; color: #fff;">The Problem</h1>
+				<p style="font-size: 20px; color: #fff; max-width: 600px; margin: 0 auto 16px auto;">Why field sales is still a black box for most organizations.</p>
 			</div>
 		</GridRow>
 
 		<!-- Row 2: Problem Content -->
 		<GridRow client:load>
-			<div class="card p-10 bg-black/40 border-2 border-pink-400/20 shadow-lg max-w-2xl mx-auto text-center">
-				<h3 class="text-2xl font-bold text-pink-400 mb-6">The Blind Spot</h3>
-				<p class="text-lg text-text-muted mb-4">
-					Millions of field reps knock doors, make calls, and have conversations that are <span class="text-pink-400 font-semibold">completely invisible to sales leaders</span>.
-				</p>
-				<p class="text-lg text-text-muted mb-4">
-					Coaching is impossible, best practices never scale, and missed opportunities go untracked.
-				</p>
-				<p class="text-lg text-text-muted">
-					<span class="text-blue-400 font-semibold">No data. No feedback. No improvement.</span>
-				</p>
-			</div>
+			<Slide3ProblemPlain client:load />
 		</GridRow>
 	</GridLayout>
 </Layout> 

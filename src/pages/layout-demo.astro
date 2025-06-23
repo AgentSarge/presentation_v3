@@ -1,112 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GridLayout, { GridRow } from '../components/GridLayout';
+import LayoutDemoHeroPlain from '../components/LayoutDemoHeroPlain';
+import LayoutDemoCompaniesPlain from '../components/LayoutDemoCompaniesPlain';
+import LayoutDemoStatsPlain from '../components/LayoutDemoStatsPlain';
 ---
 
 <Layout title="Market Validation - SalesTag" layout="wide" maxWidth="4xl">
 	<GridLayout client:load>
 		<!-- Row 1: Clean Hero -->
 		<GridRow client:load>
-			<div class="text-center">
-				<h1 class="text-gradient text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 tracking-tighter">
-					Market Validation
-				</h1>
-				<p class="text-xl lg:text-2xl text-text-muted max-w-4xl mx-auto leading-relaxed mb-4">
-					Investors have already bet <span class="text-green-400 font-bold">$659M+</span> on sales conversation intelligence
-				</p>
-				<p class="text-lg lg:text-xl text-text-secondary max-w-3xl mx-auto">
-					But existing solutions require <span class="text-pink-400 font-medium">manual interaction during conversations</span>
-				</p>
-			</div>
+			<LayoutDemoHeroPlain client:load />
 		</GridRow>
 
 		<!-- Row 2: Simple Company Cards -->
 		<GridRow client:load>
-			<div class="grid md:grid-cols-2 gap-12">
-				<!-- Gong -->
-				<div class="text-center">
-					<h3 class="text-3xl font-bold text-blue-400 mb-6">Gong</h3>
-					<div class="space-y-6">
-						<div class="card p-6">
-							<div class="text-center">
-								<p class="text-sm text-text-muted mb-2">Series E (2021)</p>
-								<p class="text-3xl font-bold text-blue-400 mb-2">$250M</p>
-								<p class="text-lg text-text-muted">$7.25B valuation</p>
-							</div>
-						</div>
-						
-						<div class="card p-6">
-							<div class="text-center">
-								<p class="text-sm text-text-muted mb-2">Series D (2020)</p>
-								<p class="text-2xl font-bold text-text-primary mb-2">$200M</p>
-								<p class="text-lg text-text-muted">$2.2B valuation</p>
-							</div>
-						</div>
-						
-						<div class="card p-6 bg-blue-400/10">
-							<div class="text-center">
-								<p class="text-lg text-text-muted mb-2">Total Funding</p>
-								<p class="text-4xl font-bold text-blue-400">$584M</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Siro AI -->
-				<div class="text-center">
-					<h3 class="text-3xl font-bold text-purple-400 mb-6">Siro AI</h3>
-					<div class="space-y-6">
-						<div class="card p-6">
-							<div class="text-center">
-								<p class="text-sm text-text-muted mb-2">Series B (2025)</p>
-								<p class="text-3xl font-bold text-purple-400 mb-2">$50M</p>
-								<p class="text-lg text-text-muted">Latest Round</p>
-							</div>
-						</div>
-						
-						<div class="card p-6">
-							<div class="text-center">
-								<p class="text-sm text-text-muted mb-2">Series A (2023)</p>
-								<p class="text-2xl font-bold text-text-primary mb-2">$18M</p>
-								<p class="text-lg text-text-muted">Early Stage</p>
-							</div>
-						</div>
-						
-						<div class="card p-6 bg-purple-400/10">
-							<div class="text-center">
-								<p class="text-lg text-text-muted mb-2">Total Funding</p>
-								<p class="text-4xl font-bold text-purple-400">$75M</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<LayoutDemoCompaniesPlain client:load />
 		</GridRow>
 
 		<!-- Row 3: Simple Market Stats -->
 		<GridRow client:load>
-			<div class="text-center">
-				<h3 class="text-2xl font-bold mb-8 text-text-primary">The Market Signal</h3>
-				
-				<div class="grid md:grid-cols-2 gap-12 mb-12">
-					<div class="card p-8 text-center">
-						<div class="text-5xl font-bold text-green-400 mb-4">$659M</div>
-						<p class="text-lg text-text-primary">Total Raised</p>
-					</div>
-					
-					<div class="card p-8 text-center">
-						<div class="text-5xl font-bold text-blue-400 mb-4">$7.25B</div>
-						<p class="text-lg text-text-primary">Peak Valuation</p>
-					</div>
-				</div>
-				
-				<div class="max-w-3xl mx-auto">
-					<blockquote class="text-2xl font-medium italic text-text-primary">
-						"The market for sales intelligence is <span class="text-blue-400">proven</span>. 
-						<span class="text-green-400">The field is wide open.</span>"
-					</blockquote>
-				</div>
-			</div>
+			<LayoutDemoStatsPlain client:load />
 		</GridRow>
 	</GridLayout>
 </Layout> 
